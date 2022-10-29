@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ВКР</title>
+</head>
+<body>
+	<h3 align="center">Прогнозирование соотношения матрица-наполнитель</h3>
+
+    <form action="" method="POST">
+    <p align="center" text-indent: 20>
+	    <label for="p2">Плотность, кг/м3 (введите значение от 1700 до 2300)</label>
+	    <input type="text" name="p2" value="{{ params.get('p2') }}">
+	</p>
+    <p align="center">
+	    <label for="p3">Модуль упругости, ГПа (введите значение от 2 до 2000)</label>
+	    <input type="text" name="p3" value="{{ params.get('p3') }}">
+	</p>
+    <p align="center">
+	    <label for="p4">Количество отвердителя, м.% (введите значение от 17 до 200)</label>
+	    <input type="text" name="p4" value="{{ params.get('p4') }}">
+	</p>
+    <p align="center">
+	    <label for="p5">Содержание эпоксидных групп,%_2 (введите значение от 14 до 34)</label>
+	    <input type="text" name="p5" value="{{ params.get('p5') }}">
+	</p>
+    <p align="center">
+	    <label for="p6">Температура вспышки, С_2 (введите значение от 100 до 414)</label>
+	    <input type="text" name="p6" value="{{ params.get('p6') }}">
+	</p>
+    <p align="center">
+	    <label for="p7">Поверхностная плотность, г/м2 (введите значение от 0 до 1400)</label>
+	    <input type="text" name="p7" value="{{ params.get('p7') }}">
+	</p>
+    <p align="center">
+	    <label for="p8">Модуль упругости при растяжении, ГПа (введите значение от 64 до 83)</label>
+	    <input type="text" name="p8" value="{{ params.get('p8') }}">
+	</p>
+    <p align="center">
+	    <label for="p9">Прочность при растяжении, МПа (введите значение от 1036 до 3849)</label>
+	    <input type="text" name="p9" value="{{ params.get('p9') }}">
+	</p>
+    <p align="center">
+	    <label for="p10">Потребление смолы, г/м2 (введите значение от 33 до 414)</label>
+	    <input type="text" name="p10" value="{{ params.get('p10') }}">
+	</p>
+    <p align="center"> 
+	    <label for="p11">Угол нашивки, град (введите значение - 0 или 90)</label>
+	    <input type="text" name="p11" value="{{ params.get('p11') }}">
+	</p>
+    <p align="center">
+	    <label for="p12">Шаг нашивки (введите значение от 0 до 15)</label>
+	    <input type="text" name="p12" value="{{ params.get('p12') }}">
+	</p>
+    <p align="center">
+	    <label for="p13">Плотность нашивки (введите значение от 0 до 104)</label>
+	    <input type="text" name="p13" value="{{ params.get('p13') }}">
+	</p>
+	<p align="center">
+	    <input type="submit" value="Рассчитать">
+	</p>
+    </form>
+
+	{% if err %}
+	<h5 style="color:firebrick" align="center">{{ error }}</h5>
+	{% endif %}
+
+    {% if p1 %}
+		<h4 align="center">Соотношение матрица-наполнитель - {{ p1 }}</h4>
+    {% endif %} 
+
+</body>
+</html>
